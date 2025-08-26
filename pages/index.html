@@ -26,7 +26,12 @@
             </ul>
         </nav>
         <main class="page">
-            <div class="container">
+            <div class="container home">
+                <section id="welcome">
+                    <h1>Welcome to PokeGuesser!</h1>
+                    <img src="../images/eevee.gif" alt="">
+                    <p>Think you can guess today's pokemon? Scroll down and start guessing!</p>
+                </section>
                 <section id="rules">
                     <h1>How to Play</h1>
                     <p>Choose a pokemon generation, then guess today's pokemon.</p>
@@ -35,7 +40,8 @@
                     <h1>Options</h1>
                     <form action="#">
                         <label for="generation">Choose a pokemon generation:</label>
-                        <select name="generation">
+                        <select name="generation" id="generation">
+                            <option value="0">All generations</option>
                             <option value="1">Kanto</option>
                             <option value="2">Johto</option>
                             <option value="3">Hoenn</option>
@@ -46,9 +52,43 @@
                             <option value="8">Galar & Hisui</option>
                             <option value="9">Paldea</option>
                         </select>
-                        <input type="submit" />
+                        <button type="button">Submit</button>
                     </form>
                 </section>
+                <section id="guess">
+                    <form id="guess-form" action="#" method="get">
+                        <label for="userGuess">
+                            <input type="text" name="userGuess" id="userGuess" placeholder="Enter your guess">
+                            <button type="button">Guess</button>
+                        </label>
+                    </form>
+                    <table>
+                        <tr>
+                            <th>Pokemon</th>
+                            <th>Type 1</th>
+                            <th>Type 2</th>
+                            <th>Evolution Stage</th>
+                            <th>Fully Evolved</th>
+                            <th>Colors</th>
+                        </tr>
+                        <!-- Sample entry -->
+                        <tr>
+                            <td>Cyndaquil</td>
+                            <td>Fire</td>
+                            <td>None</td>
+                            <td>1</td>
+                            <td>No</td>
+                            <td>Blue, Yellow</td>
+                        </tr>
+                    </table>
+                </section>
+                <div id="solved">
+                    <div class="pop-up">
+                        <button id="exit">X</button>
+                        <p>Congratulations! You found today's pokemon in X guesses!</p>
+                        <img src="../images/pikachu-clap.gif" alt="Pikachu applause">
+                    </div>
+                </div>
             </div>
         </main>
     </body>

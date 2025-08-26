@@ -18,6 +18,11 @@ li {
     border-right: 1px solid #bbb;
 }
 
+nav {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
 nav li:first-child {
     user-select: none;
 }
@@ -43,7 +48,7 @@ li a {
     padding: 0 8px 0 0;
     box-sizing: border-box;
     font-weight: bold;
-    font-family: 'Segoe UI';
+    font-family: "Segoe UI";
     color: rgb(42, 182, 140);
 }
 
@@ -58,7 +63,7 @@ li a {
     justify-content: right;
 }
 
-.login-navbar a{
+.login-navbar a {
     display: flex;
     align-items: center;
 }
@@ -84,7 +89,6 @@ a {
 }
 
 .container {
-    
     outline: 1px dashed salmon;
     display: flex;
     flex-direction: column;
@@ -92,7 +96,78 @@ a {
 }
 
 /* index.html */
+.home {
+    width: 90%;
+}
 
+.home section {
+    width: 100%;
+}
+
+.home table {
+    min-width: 600px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(51, 131, 107);
+}
+
+th, td {
+    text-align: left;
+    padding: 5px;
+    border: 1px solid rgb(42, 182, 140);
+}
+
+tr:nth-of-type(even) {
+    background-color: #2e2e2e;
+}
+
+#guess-form {
+    margin: auto;
+}
+
+
+/* Pop up for successful guess */
+#solved {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: darkgray;
+    opacity: 1;
+}
+
+.pop-up {
+    position: relative;
+    max-width: 400px;
+    width: 50%;
+    height: 300px;
+    outline: 1px dashed skyblue;
+    background-color: #4f4f4f;
+    opacity: 1;
+}
+
+#solved img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 20px;
+    color: white;
+}
+
+#solved p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 20px;
+    width: 60%;
+}
 
 /* login.html */
 form#login {
@@ -112,14 +187,30 @@ form#login input {
     border-radius: 5px;
 }
 
-button#login, input[type=submit] {
+button {
     color: white;
+    width: 70px;
+    height: 35px;
+    box-sizing: border-box;
     padding: 7px;
+    border: 1px solid rgb(51, 131, 107);
     background-color: rgb(42, 182, 140);
     margin-bottom: 40px;
     border-radius: 6px;
 }
 
-button#login:hover {
+button#exit {
+    position: absolute;
+    right: 0;
+    color: white;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    padding: 7px;
+    background-color: rgb(42, 182, 140);
+    border-radius: 6px;
+}
+
+button:hover {
     background-color: rgb(151, 226, 204);
 }
