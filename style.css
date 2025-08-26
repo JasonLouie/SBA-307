@@ -1,0 +1,125 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: sans-serif;
+}
+/* navbar styling */
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    background-color: #4f4f4f;
+}
+
+li {
+    list-style-type: none;
+    border-right: 1px solid #bbb;
+}
+
+nav li:first-child {
+    user-select: none;
+}
+
+nav a:hover {
+    color: rgb(151, 226, 204);
+}
+
+li:last-child {
+    border-right: none;
+    justify-self: center;
+}
+
+li a {
+    display: block;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.logo-navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 8px 0 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    color: rgb(42, 182, 140);
+}
+
+.logo-navbar img {
+    width: 40px;
+    height: 40px;
+}
+
+.login-navbar {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+
+.login-navbar a{
+    display: flex;
+    align-items: center;
+}
+
+.login-navbar img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(42, 182, 140);
+}
+
+/* page styling */
+.page {
+    padding-top: 80px;
+    outline: 1px dashed slateblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    
+    outline: 1px dashed salmon;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* index.html */
+
+
+/* login.html */
+form#login {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 300px;
+}
+
+form#login label {
+    margin: 10px 0;
+}
+
+form#login input {
+    padding: 3px;
+    border-radius: 5px;
+}
+
+button#login, input[type=submit] {
+    color: white;
+    padding: 7px;
+    background-color: rgb(42, 182, 140);
+    margin-bottom: 40px;
+    border-radius: 6px;
+}
+
+button#login:hover {
+    background-color: rgb(151, 226, 204);
+}

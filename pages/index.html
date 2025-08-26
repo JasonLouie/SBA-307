@@ -3,10 +3,53 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css" />
+        <title>PokeGuesser</title>
+        <link rel="icon" href="../images/logo.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="../style.css" />
     </head>
     <body>
-        
+        <nav>
+            <ul>
+                <li class="logo-navbar">
+                    <img src="../images/logo.svg" alt="PokeGuesser logo" />
+                    PokeGuesser
+                </li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li class="login-navbar">
+                    <a href="./login.html">
+                        <img src="../images/profile.png" alt="profile" />
+                        Log In
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main class="page">
+            <div class="container">
+                <section id="rules">
+                    <h1>How to Play</h1>
+                    <p>Choose a pokemon generation, then guess today's pokemon.</p>
+                </section>
+                <section id="options">
+                    <h1>Options</h1>
+                    <form action="#">
+                        <label for="generation">Choose a pokemon generation:</label>
+                        <select name="generation">
+                            <option value="1">Kanto</option>
+                            <option value="2">Johto</option>
+                            <option value="3">Hoenn</option>
+                            <option value="4">Sinnoh</option>
+                            <option value="5">Unova</option>
+                            <option value="6">Kalos</option>
+                            <option value="7">Alola</option>
+                            <option value="8">Galar & Hisui</option>
+                            <option value="9">Paldea</option>
+                        </select>
+                        <input type="submit" />
+                    </form>
+                </section>
+            </div>
+        </main>
     </body>
 </html>
