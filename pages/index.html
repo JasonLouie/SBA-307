@@ -4,29 +4,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>PokeGuesser</title>
-        <link rel="icon" href="../images/logo.svg" type="image/svg+xml" />
+        <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../style.css" />
     </head>
     <body>
         <nav>
             <ul>
                 <li class="logo-navbar">
-                    <img src="../images/logo.svg" alt="PokeGuesser logo" />
-                    PokeGuesser
+                    <img src="../images/logo.png" alt="PokeGuesser logo" />
+                    <span>PokeGuesser</span>
                 </li>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
                 <li class="login-navbar">
                     <a href="./login.html">
                         <img src="../images/profile.png" alt="profile" />
-                        Log In
+                        <span>Log In</span>
                     </a>
                 </li>
             </ul>
         </nav>
-        <main class="page">
-            <div class="container home">
+        <div class="container">
+            <div class="bg-pic"></div>
+            <div class="flexbox home">
                 <section id="welcome">
                     <h1>Welcome to PokeGuesser!</h1>
                     <img src="../images/eevee.gif" alt="">
@@ -39,28 +39,31 @@
                 <section id="options">
                     <h1>Options</h1>
                     <form action="#">
-                        <label for="generation">Choose a pokemon generation:</label>
+                        <label for="generation">Pokemon Generation:</label>
                         <select name="generation" id="generation">
-                            <option value="0">All generations</option>
-                            <option value="1">Kanto</option>
-                            <option value="2">Johto</option>
-                            <option value="3">Hoenn</option>
-                            <option value="4">Sinnoh</option>
-                            <option value="5">Unova</option>
-                            <option value="6">Kalos</option>
-                            <option value="7">Alola</option>
-                            <option value="8">Galar & Hisui</option>
-                            <option value="9">Paldea</option>
+                            <option value="-1" class="genOption">Select a pokemon generation</option>
+                            <option value="0" class="genOption">All generations</option>
+                            <option value="1" class="genOption">
+                                <img src="" alt="Kanto">
+                                <span>Kanto</span>
+                            </option>
+                            <option value="2" class="genOption">Johto</option>
+                            <option value="3" class="genOption">Hoenn</option>
+                            <option value="4" class="genOption">Sinnoh</option>
+                            <option value="5" class="genOption">Unova</option>
+                            <option value="6" class="genOption">Kalos</option>
+                            <option value="7" class="genOption">Alola</option>
+                            <option value="8" class="genOption">Galar & Hisui</option>
+                            <option value="9" class="genOption">Paldea</option>
                         </select>
-                        <button type="button">Submit</button>
                     </form>
                 </section>
                 <section id="guess">
                     <form id="guess-form" action="#" method="get">
                         <label for="userGuess">
-                            <input type="text" name="userGuess" id="userGuess" placeholder="Enter your guess">
-                            <button type="button">Guess</button>
+                            <input type="text" name="userGuess" id="userGuess" placeholder="Enter your guess">      
                         </label>
+                        <button type="button">Guess</button>
                     </form>
                     <table>
                         <tr>
@@ -82,14 +85,14 @@
                         </tr>
                     </table>
                 </section>
-                <div id="solved">
+                <!-- <div id="solved">
                     <div class="pop-up">
                         <button id="exit">X</button>
                         <p>Congratulations! You found today's pokemon in X guesses!</p>
                         <img src="../images/pikachu-clap.gif" alt="Pikachu applause">
                     </div>
-                </div>
+                </div> -->
             </div>
-        </main>
+        </div>
     </body>
 </html>

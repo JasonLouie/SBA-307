@@ -3,17 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PokeGuesser | Login</title>
-        <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+        <title>PokeGuesser | Register</title>
+        <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="../style.css" />
         <style>
-            #login {
+            #register {
                 display: block;
-                margin: 15px auto 40px auto;
-            }
-
-            .forgotText {
-                margin-bottom: 20px;
+                margin: 0 auto;
             }
         </style>
     </head>
@@ -38,19 +34,32 @@
             <div class="bg-pic"></div>
             <div class="formBackground"></div>
             <div class="flexbox loginRgstrForm">
-                <h1>User Login</h1>
+                <h1>Registration</h1>
                 <img
                     src="../images/logo.png"
                     alt="PokeGuesser icon"
                     style="height: 100px; width: 100px"
                 />
+                <div class="formError">
+                    <ul>
+                        <li class="error">Error 1</li>
+                    </ul>
+                </div>
                 <form class="userInfoForm" action="">
+                    <label for="email">
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Enter email address"
+                        />
+                    </label>
                     <label for="username">
                         <input
                             type="text"
                             name="username"
                             id="username"
-                            placeholder="Username"
+                            placeholder="Enter username"
                         />
                     </label>
                     <label for="password">
@@ -58,13 +67,23 @@
                             type="password"
                             name="password"
                             id="password"
-                            placeholder="Password"
+                            placeholder="Enter password"
                         />
                     </label>
-                    <button type="button" id="login">Login</button>
+                    <label for="">
+                        <input
+                            type="confirmPassword"
+                            name="confirmPassword"
+                            id="confirmPassword"
+                            placeholder="Retype password"
+                        />
+                    </label>
+                    <button type="button" id="register">Register</button>
                 </form>
-                <a href="./forgot-password.html" class="forgotText">Forgot password?</a>
-                <p>Create an account <a href="../pages/register.html" class="here">here</a></p>
+                <p>
+                    Already registered? Login
+                    <a href="../pages/login.html" class="here">here</a>
+                </p>
             </div>
         </div>
     </body>

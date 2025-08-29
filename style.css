@@ -1,8 +1,22 @@
 body {
-    background-color: black;
     color: white;
     margin: 0;
     font-family: sans-serif;
+    height: 100%;
+}
+
+.bg-pic {
+    background-image: url(./images/rayquaza.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(9px);
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.1);
 }
 /* navbar styling */
 ul {
@@ -10,12 +24,13 @@ ul {
     padding: 0;
     display: flex;
     overflow: hidden;
-    background-color: #4f4f4f;
+    background-color: #2f2f2f;
 }
 
 li {
     list-style-type: none;
     border-right: 1px solid #bbb;
+    font-size: 16px;
 }
 
 nav {
@@ -25,6 +40,11 @@ nav {
 
 nav li:first-child {
     user-select: none;
+}
+
+nav a {
+    transition-property: color;
+    transition-duration: 1s;
 }
 
 nav a:hover {
@@ -53,8 +73,14 @@ li a {
 }
 
 .logo-navbar img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+}
+
+.logo-navbar span {
+    font-size: 20px;
+    padding-bottom: 8px;
 }
 
 .login-navbar {
@@ -80,16 +106,17 @@ a {
 }
 
 /* page styling */
-.page {
-    padding-top: 80px;
-    outline: 1px dashed slateblue;
+.container {
+    position: relative;
+    /* tint */
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    height: calc(100vh - 44px);
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-.container {
-    outline: 1px dashed salmon;
+.flexbox {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,29 +131,86 @@ a {
     width: 100%;
 }
 
+/* Generations custom drop down */
+select#generation,
+::picker(select) {
+    appearance: base-select;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+select#generation:open::picker-icon {
+    rotate: 180deg;
+}
+
+select#generation {
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid rgb(9, 71, 53);
+    border-radius: 6px;
+    padding: 5px 8px;
+    font: inherit;
+    font-size: inherit;
+    transition: rotate 0.35s;
+}
+
+option.genOption {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    border: 2px solid rgb(9, 71, 53);
+    transition: 0.4s;
+}
+
+option.genOption:first-of-type {
+    border-radius: 6px 6px 0 0;
+}
+
+option.genOption:last-of-type {
+    border-radius: 0 0 6px 6px;
+}
+
+option.genOption:not(option:last-of-type) {
+    border-bottom: none;
+}
+
+option.genOption:nth-of-type(odd) {
+    background-color: #eeeeee;
+}
+
+.home :is(option:hover, option:focus) {
+    background-color: rgb(151, 226, 204);
+}
+
 .home table {
     min-width: 600px;
     width: 100%;
+    border-radius: 16px;
     border-collapse: collapse;
-    border: 1px solid rgb(51, 131, 107);
+    border: 1px solid rgb(42, 182, 140);
 }
 
-th, td {
+th,
+td {
     text-align: left;
-    padding: 5px;
+    padding: 8px;
     border: 1px solid rgb(42, 182, 140);
 }
 
 tr:nth-of-type(even) {
+    background-color: #4f4f4f;
+}
+
+tr:nth-of-type(odd) {
     background-color: #2e2e2e;
 }
 
 #guess-form {
-    margin: auto;
+    margin: 50px auto;
+    width: fit-content;
 }
 
-
-/* Pop up for successful guess */
+/* Pop up for successful guess (Will be used when JS implemented) */
 #solved {
     visibility: hidden;
     display: flex;
@@ -169,48 +253,88 @@ tr:nth-of-type(even) {
     width: 60%;
 }
 
-/* login.html */
-form#login {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 300px;
-}
-
-form#login label {
-    margin: 10px 0;
-}
-
-form#login input {
-    padding: 3px;
-    border-radius: 5px;
-}
-
-button {
-    color: white;
-    width: 70px;
-    height: 35px;
-    box-sizing: border-box;
-    padding: 7px;
-    border: 1px solid rgb(51, 131, 107);
-    background-color: rgb(42, 182, 140);
-    margin-bottom: 40px;
-    border-radius: 6px;
-}
-
 button#exit {
     position: absolute;
     right: 0;
-    color: white;
     width: 30px;
-    height: 30px;
+}
+
+/* login.html */
+
+/* Register/login form styling */
+.formBackground {
+    position: absolute;
+    top: 100px;
+    height: 600px;
+    width: 400px;
+    background-color: #000000;
+    opacity: 0.4;
+    border-radius: 10px;
+}
+
+.loginRgstrForm {
+    top: 100px;
+    position: absolute;
+    z-index: 1;
+    height: 600px;
+    width: 400px;
+}
+
+.loginRgstrForm h1 {
+    text-align: center;
+    margin: 60px 0 20px 0;
+    font-size: 50px;
+    color: rgb(42, 182, 140);
+}
+
+.loginRgstrForm a {
+    transition: color 0.4s;
+}
+
+.loginRgstrForm a:hover {
+    color: rgb(151, 226, 204);
+}
+
+form.userInfoForm label {
+    display: block;
+    margin: 10px 0;
+}
+
+.here {
+    text-decoration: underline;
+}
+
+/* Error message styling (Will be used when JS implemented) */
+.error {
+    display: none;
+    padding: 5px 10px;
     box-sizing: border-box;
-    padding: 7px;
-    background-color: rgb(42, 182, 140);
+    background-color: lightcoral;
+    border: 2px solid darkred;
     border-radius: 6px;
 }
 
+/* General styling for buttons and inputs */
+button {
+    color: white;
+    box-sizing: border-box;
+    height: 33px;
+    padding: 7px 12px;
+    border: 2px solid rgb(9, 71, 53);
+    background-color: rgb(51, 131, 107);
+    border-radius: 8px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
 button:hover {
-    background-color: rgb(151, 226, 204);
+    background-color: rgb(42, 182, 140);
+}
+
+input {
+    box-sizing: border-box;
+    height: 33px;
+    padding: 7px 6px;
+    border-radius: 8px;
+    border: 2px solid rgb(9, 71, 53);
 }
