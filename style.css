@@ -280,7 +280,7 @@ button#exit {
     width: 400px;
 }
 
-.loginRgstrForm h1 {
+h1.formText {
     text-align: center;
     margin: 60px 0 20px 0;
     font-size: 50px;
