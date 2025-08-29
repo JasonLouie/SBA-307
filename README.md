@@ -9,6 +9,7 @@ This section explains the structure of the project. The root folder contains the
 
 ### Images Folder
 | File Name | Description/Purpose |
+| --- | --- |
 | eevee.gif | An Eevee with a confused face. Used in `index.html` in the Welcome section. |
 | favicon.ico | A custom-made pokeball icon that resembles a Friend Ball, but the shade of green is altered to match the website theme. Used as the icon for all pages. |
 | logo.png | A custom-made pokeball icon that resembles a Friend Ball, but the shade of green is altered to match the website theme. Used in the navbar (for all pages) and as a larger logo in the `login.html`, `register.html`, and `forgot-password.html` pages. |
