@@ -20,7 +20,7 @@ This section explains the structure of the project. The root folder contains the
 ### Pages Folder
 | Page Title Name | File Name | Description | Accessible Pages |
 | --- | --- | --- | --- |
-| PokeGuesser \| Home | `index.html` | The home page consists of a welcome message, instructions on how to play the game, options (just a drop down menu), a form for the user to input guesses, and a table that displays all of the user's guesses.| Only Navbar pages |
+| PokeGuesser | `index.html` | The home page consists of a welcome message, instructions on how to play the game, options (just a drop down menu), a form for the user to input guesses, and a table that displays all of the user's guesses.| Only Navbar pages |
 | PokeGuesser \| About | `about.html` | The about page consists of heading text and a brief paragraph about the game's purpose and clarifications on having no relations to Nintendo. | Only Navbar pages |
 | PokeGuesser \| Login | `login.html` | The login page consists of a login menu with the heading text, website logo, username and password fields, login button, and additional redirects for registering and handling forgotten passwords. | Navbar pages, `register.html`, and `forgot-password.html` |
 | PokeGuesser \| Register | `register.html` | The registration page consists of a registration page with the heading text, website logo, fields such as username, password, confirm password, email, and button for registering. It also contains a redirect to the login page within the form. | Navbar pages and `login.html` |
