@@ -10,12 +10,12 @@ This section explains the structure of the project. The root folder contains the
 ### Images Folder
 | File Name | Description/Purpose |
 | --- | --- |
-| eevee.gif | An Eevee with a confused face. Used in `index.html` in the Welcome section. |
-| favicon.ico | A custom-made pokeball icon that resembles a Friend Ball, but the shade of green is altered to match the website theme. Used as the icon for all pages. |
-| logo.png | A custom-made pokeball icon that resembles a Friend Ball, but the shade of green is altered to match the website theme. Used in the navbar (for all pages) and as a larger logo in the `login.html`, `register.html`, and `forgot-password.html` pages. |
-| pikachu-clap.gif | A Pikachu that is clapping. Will be used in the pop up message that congratulates the user for guessing the pokemon. |
-| profile.png | Standard user profile image. Used in the navbar. |
-| rayquaza.jpg | Picture of a shiny Rayquaza. Used as the background in all pages, but tinted. |
+| `eevee.gif` | An Eevee with a confused face. Used in `index.html` in the Welcome section. |
+| `favicon.ico` | A custom-made pokeball icon that resembles a Friend Ball, but the shade of green is altered to match the website theme. Used as the icon for all pages. |
+| `logo.png` | A custom-made pokeball icon that resembles a Friend Ball, but the shade of green is altered to match the website theme. Used in the navbar (for all pages) and as a larger logo in the `login.html`, `register.html`, and `forgot-password.html` pages. |
+| `pikachu-clap.gif` | A Pikachu that is clapping. Will be used in the pop up message that congratulates the user for guessing the pokemon. |
+| `profile.png` | Standard user profile image. Used in the navbar. |
+| `rayquaza.jpg` | Picture of a shiny Rayquaza. Used as the background in all pages, but tinted. |
 
 ### Pages Folder
 | Page Name | File Name | Description | Accessible Pages |
