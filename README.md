@@ -18,13 +18,13 @@ This section explains the structure of the project. The root folder contains the
 | `rayquaza.jpg` | Picture of a shiny Rayquaza. Used as the background in all pages, but tinted. |
 
 ### Pages Folder
-| Page Name | File Name | Description | Accessible Pages |
+| Page Title Name | File Name | Description | Accessible Pages |
 | --- | --- | --- | --- |
-| Home | `index.html` | The home page consists of a welcome message, instructions on how to play the game, options (just a drop down menu), a form for the user to input guesses, and a table that displays all of the user's guesses.| Only Navbar pages |
-| About | `about.html` | The about page consists of heading text and a brief paragraph about the game's purpose and clarifications on having no relations to Nintendo. | Only Navbar pages |
-| Home | `login.html` | The login page consists of a login menu with the heading text, website logo, username and password fields, login button, and additional redirects for registering and handling forgotten passwords. | Navbar pages, `register.html`, and `forgot-password.html` |
-| Home | `register.html` | The registration page consists of a registration page with the heading text, website logo, fields such as username, password, confirm password, email, and button for registering. It also contains a redirect to the login page within the form. | Navbar pages and `login.html` |
-| Home | `forgot-password.html` | The forgot password page consists of a heading text, brief paragraph, and small form for submitting the user's email. | Navbar pages and `login.html` |
+| PokeGuesser | Home | `index.html` | The home page consists of a welcome message, instructions on how to play the game, options (just a drop down menu), a form for the user to input guesses, and a table that displays all of the user's guesses.| Only Navbar pages |
+| PokeGuesser | About | `about.html` | The about page consists of heading text and a brief paragraph about the game's purpose and clarifications on having no relations to Nintendo. | Only Navbar pages |
+| PokeGuesser | Login | `login.html` | The login page consists of a login menu with the heading text, website logo, username and password fields, login button, and additional redirects for registering and handling forgotten passwords. | Navbar pages, `register.html`, and `forgot-password.html` |
+| PokeGuesser | Register | `register.html` | The registration page consists of a registration page with the heading text, website logo, fields such as username, password, confirm password, email, and button for registering. It also contains a redirect to the login page within the form. | Navbar pages and `login.html` |
+| PokeGuesser | Forgot Password | `forgot-password.html` | The forgot password page consists of a heading text, brief paragraph, and small form for submitting the user's email. | Navbar pages and `login.html` |
 
 ### Other Files
 The `README.md` and `style.css` are also located in the root directory of the project. `README.md` is the read me file for the GitHub repository. The `style.css` file contains most of the styling for all pages. Some styling can be found in each respective webpage (inline and internal CSS is used).
